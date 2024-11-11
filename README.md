@@ -5,13 +5,16 @@
 SLIM2040 is a custom development board based on the the **RP2040** chip.
 It comes in a slim form factor and some notable additional features.
 
-![SLIM2040-R2](https://hackmd.io/_uploads/B1S_hA1xye.png)
+![SLIM2040-R2.1](https://hackmd.io/_uploads/B1S_hA1xye.png)
 
 ### Features
 
 - **Power supply in the range 4.5~28V**
   - Convenient and easy integration in industrial environments.
   - Can be powered directly by PLCs and other common industrial devices working in the same DC range, other than the regular USB.
+- **Reverse polarity protection**
+  - A Schottky diode to protect from reverse polarity.
+  - Can be bypassed by shorting the appropriate pad on the back of the board.
 - **Two user buttons**
   - Convenient and easy operation.
   - Can be used as a controller for actuators or sensors.
@@ -25,13 +28,13 @@ It comes in a slim form factor and some notable additional features.
   - Convenient and easy integration in industrial environments.
   - To send and read digital data from PLCs, etc.
 
-![SLIM2040-R2](https://hackmd.io/_uploads/ryY5nAJlke.png)
+![SLIM2040-R2.1](https://hackmd.io/_uploads/ryY5nAJlke.png)
 
 [^Top](#Top)
 
 
 ---
-## SLIM2040 Overview
+## SLIM2040 Rev 2.1 Overview
 
 |Front|Back|
 |:-:|:-:|
@@ -43,10 +46,11 @@ It comes in a slim form factor and some notable additional features.
 | Board form factor: | 48 × 16 mm |
 | Power, data transfer: | Micro USB Type-B interface |
 | Power Supply: | 4.5~28V via the USB connector or the provided solder pads |
+| Polarity protection: | 40V/1A Schottky diode, shortable via solder pad |
 | Storage: | 2MB QSPI flash |
-| Interfacing: | 15 × Total GPIO available via solder pads |
-|          | 2 × high-voltage 3.3~30V GPIO for industrial integration |
-|          | 13 × supporting PWM |
+| Interfacing: | 16 × Total GPIO available via solder pads |
+|          | 2 × high-voltage GPIO for industrial integration |
+|          | 14 × supporting PWM |
 |          | 1 × 12-bit ADC channels |
 | Peripherals: | I2C0 via JST-SH/Qwiic/StemmaQT connector |
 |          | I2C0 via through hole pads for SSD1306 128 × 32 px OLED |
@@ -68,21 +72,22 @@ It comes in a slim form factor and some notable additional features.
 ### GPIO Solder Pads Pinout
 | GPIO | PWM | I2C | SPI | UART | HV-GPIO |
 | :----: | :---: | :---: | :---: | :----: | :----: |
-|   0  |  y  | SDA0 |  RX0 |  TX0 | - |
-|   1  |  y  | SCL0 |  CS0 |  RX0 | - |
-|   2  |  y  | SDA1 | SCK0 | CTS0 | - |
-|   3  |  y  | SCL1 |  TX0 | RTS0 | - |
-|   4  |  y  | SDA0 |  RX0 |  TX1 | - |
-|   5  |  y  | SCL0 |  CS0 |  RX1 | - |
-|  11  |  y  | SCL1 |  TX1 |  TX1 | - |
-|  12  |  y  | SDA0 |  RX1 |  TX0 | - |
-|  16  |  y  | SDA0 |  RX0 |  TX0 | - |
-|  17  |  y  | SCL0 |  CS0 |  RX0 | - |
-|  18  |  y  | SDA1 | SCK0 | CTS0 | - |
-|  19  |  y  | SCL1 |  TX0 | RTS0 | - |
+|   0  | PWM0A | SDA0 |  RX0 |  TX0 | - |
+|   1  | PWM0B | SCL0 |  CS0 |  RX0 | - |
+|   2  | PWM1A | SDA1 | SCK0 | CTS0 | - |
+|   3  | PWM1B | SCL1 |  TX0 | RTS0 | - |
+|   4  | PWM2A | SDA0 |  RX0 |  TX1 | - |
+|   5  | PWM2B | SCL0 |  CS0 |  RX1 | - |
+|  10  | PWM5A | SDA1 | SCK1 | CTS1 | - |
+|  11  | PWM5B | SCL1 |  TX1 |  TX1 | - |
+|  12  | PWM6A | SDA0 |  RX1 |  TX0 | - |
+|  16  | PWM0A | SDA0 |  RX0 |  TX0 | - |
+|  17  | PWM0B | SCL0 |  CS0 |  RX0 | - |
+|  18  | PWM1A | SDA1 | SCK0 | CTS0 | - |
+|  19  | PWM1B | SCL1 |  TX0 | RTS0 | - |
 |  23  |  -  |   -  |   -  |   -  | OUT |
 |  24  |  -  |   -  |   -  |   -  |  IN |
-|  26  |  y  | SDA1 | SCK1 | CTS1 | - |
+|  26  | PWM5A | SDA1 | SCK1 | CTS1 | - |
 
 ### Additional GPIO Information
 - I2C0 connector on GPIO16, GPIO17
@@ -93,7 +98,10 @@ It comes in a slim form factor and some notable additional features.
 - `GPIO24 = Pin(24, Pin.IN, Pin.PULL_UP)`
 
 ※ In order for the BOOTSEL button to be recognised as a User button, use: `rp2.bootsel_button()`.  
-※ High-voltage GPIOs make use of N-Channel MOSFETs. 
+※ High-voltage GPIOs make use of N-Channel MOSFETs.  
+※ OUT pad can switch a maximum of 30V.  
+※ IN pad control signal can be up to 12V.  
+※ All the GPIOs except those labeled as high-voltage (HV) operate in the regular 3.3V limit regardless of the input power voltage.
 
 ### Resources
 Product page: git? slblabs? elecrow?
@@ -151,6 +159,6 @@ https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf
 ---
 # Notes
 
-※ All the GPIOs except those labeled as high-voltage (HV) operate in the regular 3.3V limit regardless of the input power voltage.
+※ 
 
 [^Top](#Top)
