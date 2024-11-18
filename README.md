@@ -2,22 +2,22 @@
 ###### tags: `SLBLabs` `SLB Labs` `SLIM2040` `Raspberry Pi` `RaspberryPi` `Raspberry` `Pi` `Pico` `RaspberryPiPico` `RP2040` `MicroPython` `CircuitPython` `Arduino` `C/C++`
 
 ## A RP2040-based dev board with some quirks
-SLIM2040 is a custom development board based on the the **RP2040** chip.
+SLIM2040 is a custom development board based on the the **RP2040** chip.  
 It comes in a slim form factor and some notable additional features.
 
-![SLIM2040-R2.1](https://hackmd.io/_uploads/B1S_hA1xye.png)
+![SLIM2040-R2.1](https://github.com/user-attachments/assets/b5ca9cd2-89fd-4237-9973-79c1eeddc662)
 
 ### Features
 
 - **Power supply in the range 4.5~28V**
   - Convenient and easy integration in industrial environments.
-  - Can be powered directly by PLCs and other common industrial devices working in the same DC range, other than the regular USB.
+  - Can be powered directly by PLCs and other common industrial devices working in the same DC range, including the regular USB.
 - **Reverse polarity protection**
   - A Schottky diode to protect from reverse polarity.
-  - Can be bypassed by shorting the appropriate pad on the back of the board.
+  - Can be bypassed by shorting the appropriate pad on the back of the board if more current is needed.
 - **Two user buttons**
   - Convenient and easy operation.
-  - Can be used as a controller for actuators or sensors.
+  - Can be used as a controller for sensors or actuators.
 - **Power LED, User LED and RGB LED**
   - Convenient and easy way to have a quick glimpse on the status of the system.
 - **Qwiic/StemmaQT connector**
@@ -28,7 +28,9 @@ It comes in a slim form factor and some notable additional features.
   - Convenient and easy integration in industrial environments.
   - To send and read digital data from PLCs, etc.
 
-![SLIM2040-R2.1](https://hackmd.io/_uploads/ryY5nAJlke.png)
+![SLIM2040-R2.1](https://github.com/user-attachments/assets/38ab0961-8758-47c1-b9d5-c666cb544d3d)
+
+
 
 [^Top](#Top)
 
@@ -38,7 +40,8 @@ It comes in a slim form factor and some notable additional features.
 
 |Front|Back|
 |:-:|:-:|
-|![Front](https://hackmd.io/_uploads/Sk7WnC1eJx.png)|![Back](https://hackmd.io/_uploads/H1zQnCylke.png)|
+|![Front](https://github.com/user-attachments/assets/9c3fca01-7641-43c3-bfc6-c7f7fb45bce7)|![Back](https://github.com/user-attachments/assets/6cb30ddc-858a-4dd7-b6d1-69b7b77cc76c)|
+
 
 ### Specifications
 | Component | Description |
@@ -62,9 +65,9 @@ It comes in a slim form factor and some notable additional features.
 | LED:     | 1 × Power LED |
 |          | 1 × User LED, PWM controllable |
 |          | 1 × User WS2812B Neopixel RGB LED (w/ daisychain pad) |
-| Buttons: | 1 × BOOTSEL button - SW2 (doubles up as user input button) |
-|          | 1 x User button - SW3 |
-|          | 1 × Reset button - SW1 (optional) |
+| Buttons: | 1 × BOOTSEL button - SW1 (doubles up as user input button) |
+|          | 1 x User button - SW2 |
+|          | 1 × Reset button - SW3 |
 | Software compatibility: | Micropython ・ CircuitPython ・ C/C++ ・ Arduino |
 | Dimensions: | Approximately 49 × 17 × 6 mm (w/ USB port, buttons) |
 |          | Approximately 49 × 17 × 9 mm (w/ USB port, buttons, OLED) |
