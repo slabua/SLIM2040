@@ -106,6 +106,10 @@ It comes in a slim form factor and some notable additional features.
 ※ IN pad control signal can be up to 12V.  
 ※ All the GPIOs except those labeled as high-voltage (HV) operate in the regular 3.3V limit regardless of the input power voltage.
 
+|Front PCB|Back PCB|
+|:-:|:-:|
+|![Front PCB](https://github.com/user-attachments/assets/d2bd2704-4323-48a7-bcce-10993a544477)|![Back PCB](https://github.com/user-attachments/assets/16e123fa-537b-4d4c-96ad-dcc9487b8b20)|
+
 ### Resources
 Product page: git? slblabs? elecrow?
 
