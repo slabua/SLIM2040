@@ -1,4 +1,4 @@
-# SLIM2040 (DRAFT)
+# SLIM2040
 ###### tags: `SLBLabs` `SLB Labs` `SLIM2040` `Raspberry Pi` `RaspberryPi` `Raspberry` `Pi` `Pico` `RaspberryPiPico` `RP2040` `MicroPython` `CircuitPython` `Arduino` `C/C++`
 
 ## A RP2040-based dev board with some quirks
@@ -12,7 +12,7 @@ The procedure should work on any OS platform and does not require any particular
 1. Connect SLIM2040 to the PC via its USB port.
     - The power led D2 should light up.
     - A removable drive labeled RPI-RP2 should become available.
-2. Download and copy the [firmware-test.uf2](https://drive.google.com/file/d/14lwd_rGFhAyk-DswM-JIdkm796TR42QI/view?usp=sharing) file into the RPI-RP2 drive.
+2. Download and copy the [firmware-test.uf2](./firmware-test.uf2) file into the RPI-RP2 drive.
     - SLIM2040 should reboot.
     - The user led D3 should light up blue.
     - The rgb led D4 should light up red.
