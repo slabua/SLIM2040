@@ -1,4 +1,4 @@
-# SLIM2040 (DRAFT)
+# SLIM2040
 ###### tags: `SLBLabs` `SLB Labs` `SLIM2040` `Raspberry Pi` `RaspberryPi` `Raspberry` `Pi` `Pico` `RaspberryPiPico` `RP2040` `MicroPython` `CircuitPython` `Arduino` `C/C++`
 
 ## A RP2040-based dev board with some quirks
