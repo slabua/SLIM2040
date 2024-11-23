@@ -3,7 +3,10 @@
 
 ## A RP2040-based dev board with some quirks
 SLIM2040 is a custom development board based on the the **RP2040** chip.  
-It comes in a slim form factor and some notable additional features.
+It comes in a slim form factor and some notable additional features.  
+
+### Product Page
+Pre Order at: [https://www.elecrow.com/slim2040.html](https://www.elecrow.com/slim2040.html)
 
 ![SLIM2040-R2.1](https://github.com/user-attachments/assets/b5ca9cd2-89fd-4237-9973-79c1eeddc662)
 
@@ -111,7 +114,7 @@ It comes in a slim form factor and some notable additional features.
 |![Front PCB](https://github.com/user-attachments/assets/d2bd2704-4323-48a7-bcce-10993a544477)|![Back PCB](https://github.com/user-attachments/assets/16e123fa-537b-4d4c-96ad-dcc9487b8b20)|
 
 ### Resources
-Product page: git? slblabs? elecrow?
+Product page: [https://www.elecrow.com/slim2040.html](https://www.elecrow.com/slim2040.html)
 
 [^Top](#Top)
 
