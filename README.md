@@ -6,7 +6,9 @@ SLIM2040 is a custom development board based on the the **RP2040** chip.
 It comes in a slim form factor and some notable additional features.  
 
 ### Product Page
-Order at: [https://www.elecrow.com/slim2040.html](https://www.elecrow.com/slim2040.html)
+Order at:  
+[https://www.elecrow.com/slim2040.html](https://www.elecrow.com/slim2040.html)  
+[https://www.tindie.com/products/slblabs/slim2040/](https://www.tindie.com/products/slblabs/slim2040/)  
 
 ![SLIM2040-R2.1](https://github.com/user-attachments/assets/b5ca9cd2-89fd-4237-9973-79c1eeddc662)
 
@@ -114,7 +116,9 @@ Order at: [https://www.elecrow.com/slim2040.html](https://www.elecrow.com/slim20
 |![Front PCB](https://github.com/user-attachments/assets/d2bd2704-4323-48a7-bcce-10993a544477)|![Back PCB](https://github.com/user-attachments/assets/16e123fa-537b-4d4c-96ad-dcc9487b8b20)|
 
 ### Resources
-Product page: [https://www.elecrow.com/slim2040.html](https://www.elecrow.com/slim2040.html)
+Product page:  
+[https://www.elecrow.com/slim2040.html](https://www.elecrow.com/slim2040.html)  
+[https://www.tindie.com/products/slblabs/slim2040/](https://www.tindie.com/products/slblabs/slim2040/)  
 
 [^Top](#Top)
 
